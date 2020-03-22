@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "Muchsin-WADS-Exercise4",
+      "public": "dist/Muchsin-WADS-Exercise4",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

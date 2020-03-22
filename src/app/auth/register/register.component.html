@@ -1,0 +1,39 @@
+<body class="bg-dark">
+    <div class="container">
+      <div class="card card-login mx-auto mt-5 col-md-6">
+        <div class="card-header">
+          <img class="logo-login" src="./assets/binus-logo.png">
+          <p class="header-login">Register</p>
+        </div>
+        <div class="col-12">
+            <div class="row" *ngIf="authError">
+              <div class="col-12 alert alert-danger">
+                {{ authError?.message }}
+              </div>
+            </div>
+        </div>
+        <div class="card-body">
+          <form #userRegForm="ngForm" (ngSubmit)="createUser(userRegForm)">
+            <div class="form-group">
+              <label for="nameInput"><b>First Name</b></label>
+              <input ngModel #firstName="ngModel" class="form-control" name="firstName" id="firstname" type="text" placeholder="First Name (e.g. Steve)" required>
+            </div>
+            <div class="form-group">
+              <label for="nameInput"><b>Last Name</b></label>
+              <input ngModel #lastName="ngModel" class="form-control" name="lastName" id="lastname" type="text" placeholder="Last Name (e.g. Jobs)" required>
+            </div>
+            <div class="form-group">
+              <label for="emailInput"><b>Email</b></label>
+              <input ngModel #email="ngModel" class="form-control" id="email" name="email" type="email" placeholder="Email (e.g. example@example.com)" required>
+            </div>
+            <div class="form-group">
+              <label for="passwordInput"><b>Password</b></label>
+              <input ngModel #password="ngModel"class="form-control" name="password" id="password" type="password" placeholder="Password (e.g. example123)" required>
+            </div>
+            <button type="submit" class="btn btn-info btn-block">Register</button>
+          </form>
+          <hr><p class="text-center">Already have an account? Login <a href="login">here</a></p>
+        </div>
+      </div>
+    </div>
+  </body>

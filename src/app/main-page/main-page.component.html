@@ -1,0 +1,7 @@
+<div class="container-fluid mx-auto mt-5 col-md-10">
+    <p *ngIf="user" class="text-light text-center" style="font-size: 40px;">Hello, {{ user?.displayName }}!</p>
+    <p *ngIf="user" class="text-light text-center" style="font-size: 32px;"><i>Your email is: {{ user?.email }}</i></p>
+    <div class="text-center">
+      <button class="btn btn-primary center" *ngIf="user" (click)="logout()">Logout</button>
+    </div>
+  </div>
